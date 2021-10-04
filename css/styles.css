@@ -174,6 +174,7 @@ p:last-child {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/bgi.jpg);
   background-repeat: no-repeat;
+  max-width: 1600px;
 }
 
 .hero-title {
@@ -305,7 +306,6 @@ p:last-child {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
   color: #ffffff;
   text-align: center;
@@ -316,6 +316,7 @@ p:last-child {
   text-transform: uppercase;
   padding-top: 27px;
   margin-bottom: 0;
+  padding-bottom: 27px;
 }
 /*============CLOSE===SERVICES==============*/
 
@@ -574,7 +575,7 @@ address {
   background: #f5f4fa;
   border-radius: 4px;
   border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
@@ -682,6 +683,11 @@ address {
   transform: translateY(0);
 }
 
+.gallery-section-link:focus .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .text {
   color: #fff;
   font-size: 18px;
@@ -692,6 +698,7 @@ address {
 /* MODAL */
 
 .backdrop {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -710,11 +717,8 @@ address {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  position: relative;
+  margin: auto;
   min-height: 581px;
   min-width: 528px;
   border-radius: 4px;
